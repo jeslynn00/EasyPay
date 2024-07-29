@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>EasyPay Finance</title>
+        <style>
+            .navbar-brand {
+                font-size: xx-large;
+            }
+            .bg-custom {
+                background-color:lightpink;
+                
+            }
+            nav {
+              padding: 20px;
+            }
+            .navbar-form {
+              input {
+                font-size: xx-large;
+              }
+            }
+            .btn1 {
+                font-size: xx-large;
+                background-color: white;
+                border: 0;
+                
+            }
+            .para1 {
+                border: 2px solid;
+                background-color: rgba(247, 206, 212, 0.76);
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+                font-size:xx-large;
+                width: 60%;
+                margin-left: 20%;
+            }
+            .btn2 {
+                background-color: white;
+                a{text-decoration: none; color: black;}
+                margin-right: 20%;
+                padding: 20px;
+                font-size: large;
+                
+                
+            }
+            table, td {
+                border:1px solid black;
+                font-size: larger;
+                padding: 20px;
+        
+            }
+            .content1 {
+                margin-left: 30%;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse bg-custom">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" style="color: brown;" href="homepage.html">「 ✦ EasyPay ✦ 」</a>
+              </div>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search for products or stores" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">🔍</button>
+              </form>
+            </div>
+        </nav>
+        <button class="btn1" type="button"><a href="homepage.html">⇦ Finance</a></button>
+        <br>
+        <br>
+        <p class="para1">👛 EasyPay Wallet :
+            S$ 88.88
+        </p>
+        <br>
+        <div class="content1">
+            <button  class="btn2"  type="button"><a href="topup.html">Top Up 💵</a></button>
+            <button  class="btn2" type="button"><a href="scantopay.html">Scan to Pay 🤳</a></button>
+            <br>
+            <br>
+            <h2><b>Recent Transactions</b></h2>
+            <table style="width: 50%;">
+                <tr>
+                    <td>Top Up + $ <span id="displayamount" style="background-color: rgb(188, 229, 243);"></span> </td>
+                    <script> 
+                        const urlParams = new URLSearchParams(window.location.search); 
+                        const a = urlParams.get('amt'); 
+                        document.getElementById('displayamount').innerText = a;
+                    </script>
+                </tr>
+                <tr>
+                    <td>Scan to Pay - $ 10</td>
+                </tr>
+                <tr>
+                    <td>Top Up + $ 50</td>
+                </tr>
+                <tr>
+                    <td>Scan to Pay - $ 9.90</td>
+                </tr>
+                <tr>
+                    <td>Scan to Pay - $ 5</td>
+                </tr>
+                <tr>
+                    <td>Top Up + $ 20</td>
+                </tr>
+
+            </table>
+        </div>
+        
+
+    </body> 
+</html>

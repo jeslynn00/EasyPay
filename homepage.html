@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>EasyPay</title>
+        <style>
+            .navbar-brand {
+                font-size: xx-large;
+            }
+            .bg-custom {
+                background-color:lightpink;
+                
+            }
+            nav {
+              padding: 20px;
+            }
+            .navbar-form {
+              input {
+                font-size: xx-large;
+              }
+            }
+
+            .button1 {
+              text-align: center; 
+              font-size: x-large;
+              
+            }
+            .btn1 {
+              margin-right: 5%;
+            }
+
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: lightgrey;
+              position: fixed;
+              bottom: 0;
+              width: 100%;
+            }
+
+            .li1 {
+              float:left;
+            }
+            .li2 {
+              float:left;
+              margin-left: 42.5%;
+            }
+            .li3 {
+              float:right;
+            }
+
+            li a {
+              display: block; 
+              padding: 14px 16px; 
+              text-decoration: none;
+            }
+
+            li a:hover{
+              background-color: darkgrey;
+            }
+
+            /* Float four columns side by side */
+            .column {
+              float: left;
+              width: 25%;
+              padding: 0 10px;
+            }
+
+            /* Remove extra left and right margins, due to padding */
+            .row {margin: 0 -5px;}
+
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            /* Responsive columns */
+            @media screen and (max-width: 600px) {
+              .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+              }
+            }
+
+            /* Style the counter cards */
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              padding: 16px;
+              text-align: center;
+              background-color: #f1f1f1;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse bg-custom">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" style="color: brown;" href="#">「 ✦ EasyPay ✦ 」</a>
+            </div>
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search for products or stores" name="search">
+              </div>
+              <button type="submit" class="btn btn-default">🔍</button>
+            </form>
+          </div>
+        </nav>
+        <br>
+        <div class="button1">
+          <a href="finance.html"><button class="btn1" type="button">Balance : $ 88.88 <img src="https://cdn-icons-png.flaticon.com/512/493/493389.png" width="65"></button></a>
+
+          <a href="#"><button class="btn2"  type="button">Total Points : 999 pts <img src="/images/earn-reward-points-icon-style-vector.jpg" width="65"></button></a>
+        </div>
+        <br>
+        <br>
+        <div style="height:1500px;">
+          <h2><b>Recommended for you</b></h2>
+          <br>
+          <!-- First Row -->
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <a href="https://shopee.sg/"><img src="/images/shopee.jpg" width="55%"></a>  
+                  <h4><b>Shopee official</b></h4>
+                  <p>Up to 25% OFF</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="https://www.agoda.com/"><img src="/images/agoda2.png" width="75%"></a>
+                  <h4><b>Shopee official</b></h4>
+                  <p>Up to 15% OFF</p>
+              </div>  
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="https://www.fairprice.com.sg/"><img src="/images/fairprice.webp" width="47%"></a>
+                  <h4><b>FairPrice Online</b></h4>
+                  <p>Up to 12% OFF</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="https://www.uniqlo.com/sg/en/"><img src="/images/uniqlo.png" width="35%"></a>
+                  <h4><b>Uniqlo</b></h4>
+                  <p>Up to 2.5% OFF</p>
+              </div>
+            </div>
+          </div>
+                   
+              
+          <br><br>
+          <br><br>
+
+          <!-- Second Row -->
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <a href="https://www.lazada.sg/"><img src="/images/lazada.png" width="40%"></a>  
+                  <h4><b>Lazada official Store</b></h4>
+                  <p>Up to 20% OFF</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="https://www.nike.com/sg/"><img src="/images/nike.jpg" width="70%"></a>
+                  <h4><b>Nike SG</b></h4>
+                  <p>Up to 5% OFF</p>
+              </div>  
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="https://www.amazon.sg/"><img src="/images/amazon.png" width="70%"></a>
+                  <h4><b>Amazon SG</b></h4>
+                  <p>Up to 20% OFF</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="https://www.klook.com/"><img src="/images/klook.png" width="70%"></a>
+                  <h4><b>Klook official</b></h4>
+                  <p>Up to 15% OFF</p>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+          <br><br>
+
+          <!-- Third Row -->
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <a href="https://www.dominos.com.sg/"><img src="/images/domino.png" width="40%"></a>  
+                  <h4><b>Dominos</b></h4>
+                  <p>Up to 0.5% OFF</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="https://www.charleskeith.com/sg"><img src="/images/ck.jpg" width="53%"></a>
+                  <h4><b>Charles & Keith</b></h4>
+                  <p>Up to 3.5% OFF</p>
+              </div>  
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="hhttps://mixue.asia/"><img src="/images/mixue.webp" width="53%"></a>
+                  <h4><b>Mixue SG</b></h4>
+                  <p>Up to 0.5% OFF</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="https://cottonon.com/SG/"><img src="/images/cottonon.jpg" width="53%"></a>
+                  <h4><b>Cotton On</b></h4>
+                  <p>Up to 13% OFF</p>
+              </div>
+            </div>
+          </div>
+          
+            
+
+        <ul style="background-color: rgb(244, 200, 206);">
+          <li class="li1"><a href="#home"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" width="100px"></a></li>
+          <li class="li2"><a href="scantopay.html"><img src="https://cdn-icons-png.flaticon.com/128/1341/1341632.png" width="100px"></a></li>
+          <li class="li3"><a href="firstpage.html"><img src="https://cdn-icons-png.flaticon.com/512/3276/3276535.png" width="100px"></a></li>
+        </ul>
+
+    </body>
+</html>

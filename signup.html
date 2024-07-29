@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyPay Sign up an account</title>
+        <style>
+            body {
+                font-size: xx-large;
+                input{font-size: xx-large;}
+                button{font-size: xx-large;}
+                text-align: center;
+            }
+            .btn2 {
+                border: 0;
+            }
+            h1 {
+                border: 2px solid;
+                background-color: pink;
+                text-align: center;
+                font-size:xxx-large;
+                padding: 10px;
+                a {text-decoration: none;}
+            }
+        </style>
+    </head>
+    <body>
+      <h1><a style="color: brown;" href="homepage.html">「 ✦ EasyPay ✦ 」</a></h1>
+        <div class="container">
+            <br>
+            <div class="text-center"><h2 style="text-decoration: underline;">Signing Up An Account</h2></div>
+            <br>
+            <div class="text-center">
+                <form>
+                  <div class="container">
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="newemail" name="email" placeholder="Enter Email" required><br><br>
+    
+                    <label for="password">Password:</label><br>
+                    <input type="password" placeholder="Enter Password" name="password" id="newpassword"  required><br><br>
+    
+                    <label for="password-repeat">Repeat Password:</label><br>
+                    <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat"  required><br><br>
+    
+                    <button type="button" onclick="registeruser(),authenticated()">Sign up and authenticate with</button> 
+
+                    
+                  </div>
+                </form>
+                  <br>
+                  <button class="btn2"><a href="https://login.singpass.gov.sg/main?scope=openid&response_type=code&redirect_uri=https%3A%2F%2Fwww.singpass.gov.sg%2Fhome%2Fui%2Fcallback%2Fauth&state=2dc73a63-d546-41df-9e5d-27c837230aaf&nonce=f3e58a5c-7e7f-46ba-9c16-fa9033ae524f&client_id=ntmRnh1tflHVnWsik9AN1Fn2Cx7X8gVw&pwd_enabled=true" target="_blank"><img src="/images/singpass.webp"></a></button>
+                  <div class="container signin">
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                  </div>
+                
+                
+                <br>
+                <br>
+            </div>
+          
+        </div>
+        <script src="index1.js"></script>
+    </body>
+</html>

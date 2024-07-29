@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>EasyPay</title>
+        <style>
+            .navbar-brand {
+                font-size: xx-large;
+            }
+            .bg-custom {
+                background-color:lightpink;
+                
+            }
+            nav {
+              padding: 20px;
+            }
+            .navbar-form {
+              input {
+                font-size: xx-large;
+              }
+            }
+            .btn1 {
+                font-size: xx-large;
+                background-color: white;
+                border: 0;
+            }
+            .para1 {
+                border: 2px solid;
+                background-color: bisque;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+                font-size:xx-large;
+            }
+            .btn2 {
+                background-color: white;
+                a{text-decoration: none; color: black;}
+                margin-right: 20%;
+                padding: 20px;
+                font-size: large;
+                
+                
+            }
+            table, td {
+                border:1px solid black;
+                font-size: larger;
+                
+            }
+            .btn3 {
+                border: 0;
+                width: 100%;
+                background-color: white;
+                a{text-decoration: none; color: black;}
+                text-align: start;
+            }
+            img {
+                margin-left: 38%;
+            }
+            .l1 {
+                font-size: x-large;
+                margin-left: 38%;
+            }
+            .btn4 {
+                font-size:x-large;
+                margin-left: 38%;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse bg-custom">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" style="color: brown;" href="homepage.html">「 ✦ EasyPay ✦ 」</a>
+              </div>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search for products or stores" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">🔍</button>
+              </form>
+            </div>
+        </nav>
+        <button class="btn1" type="button"><a href="topup.html">⇦ Banking App</a></button>
+        <br><br>
+        <br>
+        <h1 class="text-center">Top Up Instructions</h1>
+        <img src="ocbcacclogin.png" width="25%">
+        <ol class="l1">
+            <li>Save this QR code to your photos or take a screenshot</li>
+            <li>Log in to your <b>bank</b> app</li>
+            <li>Tap on Import</li>
+            <li>Upload the QR code</li>
+            <li>Enter your top-up amount</li>
+            <li>Tap on the arrow button to complete your transaction</li>
+        </ol>
+        <button  class="btn4" onclick="setTimeout(redirect,5000)">Tap to Save</button>
+        <script>
+            function redirect() {
+                alert("Succesful top up ✅");
+                window.location="finance.html";
+            }  
+        </script>
+
+
+    </body> 
+</html>

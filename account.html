@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyPay Account Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+
+            .navbar-brand {
+                font-size: xx-large;
+            }
+            .bg-custom {
+                background-color:lightpink;
+                
+            }
+            nav {
+              padding: 20px;
+            }
+            .navbar-form {
+              input {
+                font-size: xx-large;
+              }
+            }
+            body {
+                text-align: center;
+                
+            }
+            button {
+                border: 0;
+                padding: 20px;
+                border-radius: 12px;
+                font-size: xx-large;
+                text-align: start;
+            }
+            table {
+                button{
+                    background-color: white;
+                    border: 1px solid grey;
+                    width: 50%;
+                    /* span{
+                    margin-right: 40%;} */
+                
+                }
+                
+            }
+            p {
+                font-size: large;
+            }
+            h3 {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse bg-custom">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" style="color: brown;" href="homepage.html">「 ✦ EasyPay ✦ 」</a>
+              </div>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search for products or stores" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">🔍</button>
+              </form>
+            </div>
+        </nav>
+
+        <h1>Account Details</h1>
+        <h3>Email</h3> 
+        <div id="displayemail" style="font-size: large;"></div> 
+        <h3>Password:</h3> 
+        <div id="displaypass" style="font-size: large;"></div> 
+    
+        <script> 
+            const urlParams = new URLSearchParams(window.location.search); 
+            const e = urlParams.get('email'); 
+            document.getElementById('displayemail').innerText = e; 
+            const p = urlParams.get('password'); 
+            document.getElementById('displaypass').innerText = p; 
+        </script> 
+
+        <br>
+        <div class="button">
+            <a href="finance.html"><button type="button">Balance : <br> $ 88.88 <img src="https://cdn-icons-png.flaticon.com/512/493/493389.png" width="60"></button></a>            
+            <a href="#"><button type="button">Total Points : <br> 999 pts <img src="earn-reward-points-icon-style-vector.jpg" width="60px"></button></a>
+        </div>
+        <br>
+        <br>
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <a href="a&s.html"><button type="button">Account and Security <span>></span></button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="aboutus.html"><button type="button">About Us ></button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="support.html"><button type="button">Support ></button></a>
+                </td>
+            </tr>
+        </table>
+        
+
+        <script src="index1.js"></script>
+    </body>
+</html>
