@@ -8,7 +8,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
-
             .navbar-brand {
                 font-size: xx-large;
             }
@@ -24,8 +23,16 @@
                 font-size: xx-large;
               }
             }
+            .logoutbtn {
+                border: 1px solid;
+                border-color: darkgray;
+                padding: 20px;
+                font-size: 20px;
+            }
+
             body {
                 text-align: center;
+                font-family:Georgia, 'Times New Roman', Times, serif;
                 
             }
             button {
@@ -59,7 +66,7 @@
         <nav class="navbar navbar-inverse bg-custom">
             <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-brand" style="color: brown;" href="homepage.html">「 ✦ EasyPay ✦ 」</a>
+                <a class="navbar-brand" style="color: brown;" href="index1.html">「 ✦ EasyPay ✦ 」</a>
               </div>
               <form class="navbar-form navbar-left">
                 <div class="form-group">
@@ -67,6 +74,7 @@
                 </div>
                 <button type="submit" class="btn btn-default">🔍</button>
               </form>
+              
             </div>
         </nav>
 
@@ -86,8 +94,19 @@
 
         <br>
         <div class="button">
-            <a href="finance.html"><button type="button">Balance : <br> $ 88.88 <img src="https://cdn-icons-png.flaticon.com/512/493/493389.png" width="60"></button></a>            
-            <a href="#"><button type="button">Total Points : <br> 999 pts <img src="earn-reward-points-icon-style-vector.jpg" width="60px"></button></a>
+            <a href="finance.html"><button type="button">Balance : <br> <span id="balance">Loading...</span> <img src="https://cdn-icons-png.flaticon.com/512/493/493389.png" width="60"></button></a>    
+            <script>
+                // Function to load the balance from localStorage
+                function loadBalance() {
+                    const balance = localStorage.getItem('balance');
+                    document.getElementById('balance').innerText = `$${(parseFloat(balance) || 1000.00).toFixed(2)}`;
+                }
+        
+                // Load balance when the page loads
+                window.onload=loadBalance;
+                
+            </script>        
+            <a href="#"><button type="button">Total Points : <br> 999 pts <img src="/images/earn-reward-points-icon-style-vector.jpg" width="60px"></button></a>
         </div>
         <br>
         <br>
@@ -108,6 +127,8 @@
                 </td>
             </tr>
         </table>
+        <br>
+        <a href="index.html" style="text-decoration: none;"><button class="logoutbtn" onclick="return confirm('Are you sure you want to log out?')">Log Out</button></a>
         
 
         <script src="index1.js"></script>

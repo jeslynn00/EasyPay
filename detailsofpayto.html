@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="swipe.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <title>Scan to Pay</title>
         <style>
@@ -22,6 +22,9 @@
                 padding: 20px;
 
             }
+            input {
+                font-size: large;
+            }
 
         </style>
     </head>
@@ -34,19 +37,30 @@
             <tr>
                 <td>
                     <b>From :</b> <br>
-                    Ewallet
+                    Ewallet (Balance : <span id="balance">Loading...</span>)
+                    <script>
+                        // Function to load the balance from localStorage
+                        function loadBalance() {
+                            const balance = localStorage.getItem('balance');
+                            document.getElementById('balance').innerText = `$${(parseFloat(balance) || 1000.00).toFixed(2)}`;
+                        }
+                
+                        // Load balance when the page loads
+                        window.onload=loadBalance;
+                        
+                    </script>
                 </td>
             </tr>
             <tr>
                 <td>
                     <b>Amount :</b> <br>
-                    $ 32.14
+                    <input type="number" id="amount" value="32.41" step="0.01"/>
                 </td>
             </tr>
             <tr>
                 <td>
                     <b>To :</b> <br>
-                    Bak Kut Teh Shop
+                    <input type="text" value="Bak Kut Teh Shop"/>                    
                 </td>
             </tr>
         </table>
@@ -55,12 +69,35 @@
         <div class="swipe1">
             <div id="button-background">
                 <span class="slide-text">Swipe</span>
-                <div id="slider">
-                    <i id="locker" class="material-icons">➡</i>
+                <div id="slider" onmouseleave="deduct()">
+                    <i id="locker" class="material-icons" >➡</i>
                 </div>
             </div>
         </div>
-        <script src="/index.js"></script>
+        <script>
+            // Function to deduct the balance in localStorage
+            function deduct() {
+                // Get the input value
+                const amountInput = document.getElementById('amount').value;
+                const amount = parseFloat(amountInput);
+                
+                if (amount < 0) {
+                    alert("Please enter a valid number.");
+                    return;
+                }
+
+                // Get the current balance from localStorage
+                let balance = parseFloat(localStorage.getItem('balance')) || 1000.00;
+
+                // Update the balance
+                balance = balance - amount;
+
+                // Save the updated balance to localStorage
+                localStorage.setItem('balance', balance.toFixed(2));
+                
+            }
+        </script>
+        <script src="/swipe.js"></script>
 
     </body> 
 </html>

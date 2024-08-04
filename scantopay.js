@@ -1,6 +1,4 @@
 
-// script.js file
- 
 function domReady(fn) {
     if (
         document.readyState === "complete" ||
@@ -15,8 +13,8 @@ function domReady(fn) {
 domReady(function () {
  
     // If found your qr code
-    function onScanSuccess(decodeText, decodeResult) {
-        alert("You Qr is : " + decodeText, decodeResult);
+    function onScanSuccess() {
+        alert("You Qr is scanned!");
     }
  
     let htmlscanner = new Html5QrcodeScanner(
@@ -25,8 +23,8 @@ domReady(function () {
     );
 
     htmlscanner.render(onScanSuccess);
-    setTimeout(redirect,6000)
-            function redirect() {
+    setTimeout(redirect,10000)
+        function redirect() {
             window.location.replace("detailsofpayto.html");
         }
 });

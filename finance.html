@@ -8,6 +8,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title>EasyPay Finance</title>
         <style>
+            body {
+                font-family:Georgia, 'Times New Roman', Times, serif;
+            }
             .navbar-brand {
                 font-size: xx-large;
             }
@@ -64,7 +67,7 @@
         <nav class="navbar navbar-inverse bg-custom">
             <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-brand" style="color: brown;" href="homepage.html">「 ✦ EasyPay ✦ 」</a>
+                <a class="navbar-brand" style="color: brown;" href="index1.html">「 ✦ EasyPay ✦ 」</a>
               </div>
               <form class="navbar-form navbar-left">
                 <div class="form-group">
@@ -74,12 +77,26 @@
               </form>
             </div>
         </nav>
-        <button class="btn1" type="button"><a href="homepage.html">⇦ Finance</a></button>
+        <button class="btn1" type="button"><a href="index1.html">⇦ Finance</a></button>
         <br>
         <br>
-        <p class="para1">👛 EasyPay Wallet :
-            S$ 88.88
-        </p>
+        <div class="para1">
+            <h1>👛 EasyPay Wallet Balance :
+                <span id="balance">Loading...</span>
+            </h1>  
+        </div>
+        <script>
+            // Function to load the balance from localStorage
+            function loadBalance() {
+                const balance = localStorage.getItem('balance');
+                document.getElementById('balance').innerText = `$${(parseFloat(balance) || 1000.00).toFixed(2)}`;
+            }
+    
+            // Load balance when the page loads
+            window.onload=loadBalance;
+            
+        </script>
+
         <br>
         <div class="content1">
             <button  class="btn2"  type="button"><a href="topup.html">Top Up 💵</a></button>
@@ -88,33 +105,34 @@
             <br>
             <h2><b>Recent Transactions</b></h2>
             <table style="width: 50%;">
-                <tr>
-                    <td>Top Up + $ <span id="displayamount" style="background-color: rgb(188, 229, 243);"></span> </td>
-                    <script> 
-                        const urlParams = new URLSearchParams(window.location.search); 
-                        const a = urlParams.get('amt'); 
-                        document.getElementById('displayamount').innerText = a;
-                    </script>
-                </tr>
-                <tr>
-                    <td>Scan to Pay - $ 10</td>
-                </tr>
-                <tr>
-                    <td>Top Up + $ 50</td>
-                </tr>
-                <tr>
-                    <td>Scan to Pay - $ 9.90</td>
-                </tr>
-                <tr>
-                    <td>Scan to Pay - $ 5</td>
-                </tr>
-                <tr>
-                    <td>Top Up + $ 20</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td><span id="displayamount" style="background-color: rgb(188, 229, 243);"></span> </td>
+                        <script> 
+                            const urlParams = new URLSearchParams(window.location.search); 
+                            const a = urlParams.get('amount'); 
+                            document.getElementById('displayamount').innerText = 'Top Up + $' && a;
+                        </script>
+                    </tr>
+                    <tr>
+                        <td>Scan to Pay - $ 10</td>
+                    </tr>
+                    <tr>
+                        <td>Top Up + $ 50</td>
+                    </tr>
+                    <tr>
+                        <td>Scan to Pay - $ 9.90</td>
+                    </tr>
+                    <tr>
+                        <td>Scan to Pay - $ 5</td>
+                    </tr>
+                    <tr>
+                        <td>Top Up + $ 20</td>
+                    </tr>
+                </tbody>
 
             </table>
         </div>
         
-
     </body> 
 </html>
